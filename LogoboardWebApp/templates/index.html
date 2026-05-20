@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brand & Product Board</title>
+    <style>
+        body { font-family: sans-serif; transition: background 0.5s; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 15px; }
+        .section { margin-bottom: 30px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+
+        /* Enlarged Text Style */
+        .big-text { font-size: 3rem; font-weight: bold; margin: 20px 0; text-align: center; }
+
+        /* Grid Layouts */
+        .profile-container img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .product-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
+        .product-board img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+        .brand-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+        .brand-item { text-align: center; width: 120px; }
+        .brand-item img { width: 100px; height: auto; display: block; margin: 0 auto 10px; }
+
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; margin-top: 5px; padding: 8px; }
+    </style>
+</head>
+<body style="background-color: {{ bg_color }};">
+
+<div class="container">
+    <h1>Create Your Featured Board</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="section">
+            <label>Profile Photo (PNG/JPG):</label>
+            <input type="file" name="profile_photo" accept=".png, .jpg, .jpeg">
+
+            <label>Mood Background Color:</label>
+            <select name="mood_color">
+                <option value="#ffffff">Default White</option>
+                <option value="#f8d7da">Soft Rose (Calm)</option>
+                <option value="#d1ecf1">Sky Blue (Focus)</option>
+                <option value="#d4edda">Mint Green (Fresh)</option>
+                <option value="#fff3cd">Sunny Yellow (Energy)</option>
+            </select>
+
+            <label>Enlarged Message:</label>
+            <input type="text" name="enlarged_text" placeholder="Type something big...">
+        </div>
+
+        <div class="section">
+            <label>Favorite Products (Up to 8 photos):</label>
+            <input type="file" name="product_photos" multiple accept=".png, .jpg, .jpeg">
+        </div>
+
+        <div class="section">
+            <label>Select Brands to Feature:</label>
+            <select name="brands" multiple style="height: 150px;">
+                {% for brand in brands %}
+                <option value="{{ brand.name }}">{{ brand.name }}</option>
+                {% endfor %}
+            </select>
+            <small>Hold Ctrl (Cmd) to select multiple</small>
+        </div>
+
+        <button type="submit" style="background: #333; color: #fff; padding: 10px 20px; border: none; cursor: pointer;">Update Board</button>
+    </form>
+
+    <hr>
+
+    {% if profile_pic %}
+    <div class="profile-container" style="text-align: center;">
+        <img src="{{ url_for('static', filename='uploads/' + profile_pic) }}" alt="Profile">
+    </div>
+    {% endif %}
+
+    {% if text_content %}
+    <div class="big-text">{{ text_content }}</div>
+    {% endif %}
+
+    <h3>Product Board</h3>
+    <div class="product-board">
+        {% for pic in product_pics %}
+        <img src="{{ url_for('static', filename='uploads/' + pic) }}" alt="Product">
+        {% endfor %}
+    </div>
+
+    <h3>Featured Brands</h3>
+    <div class="brand-list">
+        {% for brand in selected_logos %}
+        <div class="brand-item">
+            <img src="{{ brand.logo }}" alt="{{ brand.name }} Logo">
+            <span>{{ brand.name }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
