@@ -31,7 +31,7 @@ BRANDS = [
     {"name": "Santa Clara University", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Santa_Clara_U_Seal.svg/1280px-Santa_Clara_U_Seal.svg.png"},
     {"name": "Baskin-Robbins", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Baskin-Robbins_logo.svg/960px-Baskin-Robbins_logo.svg.png"},
     {"name": "Google Vintage", "logo": "https://cdn.logojoy.com/wp-content/uploads/20230801145708/google-logo-1999-600x217.png"},
-    {"name": "Art Storefronts", "logo": "https://images.discerningassets.com/image/upload/v1674082181/sjbjwlaemd2xaw3pvtkd.png"},
+    {"name": "Art Storefronts", "logo": "https://www.foundmyself.com/review/logos/art-storefronts.png"},
     {"name": "YouTube", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/3840px-Logo_of_YouTube_%282015-2017%29.svg.png"},
     {"name": "Yahoo! Vintage", "logo": "https://logos-world.net/wp-content/uploads/2020/10/Yahoo-Logo-2009-2013.png"},
     {"name": "Windows Vintage", "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Logo_%281992-2001%29.svg"},
@@ -170,7 +170,16 @@ BRANDS = [
     {"name": "Rocnation", "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Roc_Nation_logo.png"},
     {"name": "Rocawear", "logo": "https://cdn.freebiesupply.com/logos/large/2x/rocawear-logo-png-transparent.png"},
     {"name": "D'Usse", "logo": "https://goodspiritsnews.wordpress.com/wp-content/uploads/2019/07/logo-dusse-cognac-300x300.jpg?w=640"},
-    {"name": "Telefunken", "logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/Telefunken.svg"}
+    {"name": "Telefunken", "logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/Telefunken.svg"},
+
+    {"name": "San Jose State University", "logo": "https://studyurbanplanning.com/uploads/8b30f1cb-a50c-11f0-86be-ee9758a348e2-logo.jpg"},
+    {"name": "Analog Devices", "logo": "https://cdn.freebiesupply.com/logos/large/2x/analog-devices-logo-png-transparent.png"},
+    {"name": "International Rectifier", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/International_Rectifier_logo.svg/1280px-International_Rectifier_logo.svg.png"},
+    {"name": "Meta", "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Meta_Inc._logo.jpg"},
+    {"name": "Fitbit by Google", "logo": "https://logos-world.net/wp-content/uploads/2021/02/Fitbit-Symbol.jpg"},
+    {"name": "C++", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png"},
+    {"name": "Python", "logo": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png"},
+    {"name": "Tektronix", "logo": "https://cdn.freebiesupply.com/logos/large/2x/tektronix-logo-png-transparent.png"}
 ]
 
 def allowed_file(filename):
