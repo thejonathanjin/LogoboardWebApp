@@ -16,8 +16,6 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # In a production app, this could be a full list of 100
 BRANDS = [
     {"name": "Presidential Seal of The United States", "logo": "https://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg"},
-    {"name": "The Trump Organization", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/The_Trump_Organization_logo.svg/1280px-The_Trump_Organization_logo.svg.png"},
-    {"name": "US Space Force", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Seal_of_the_United_States_Space_Force.svg/250px-Seal_of_the_United_States_Space_Force.svg.png"},
     {"name": "Air Force One", "logo": "https://airportag.com/cdn/shop/products/air-force-one-pin-main.jpg?v=1665580562&width=2048"},
     {"name": "Harvard University", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1280px-Harvard_University_coat_of_arms.svg.png"},
     {"name": "DNC", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/US_Democratic_Party_Logo.svg/500px-US_Democratic_Party_Logo.svg.png"},
