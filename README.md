@@ -1,7 +1,7 @@
 # LogoboardWebApp
 from BrandedWebApp to LogoboardWebApp, with AI generated assistance from Google Gemini, Grok, Meta AI, and ChatGPT!
 
-# BrandedWebApp
+# Branded
 
 BrandedApp is a Python Web App for creating a web page and personal profile of a user's favorite products and company logos, locally on a development server.
 
